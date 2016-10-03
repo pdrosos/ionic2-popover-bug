@@ -22,12 +22,14 @@ export class PopoverMenuPage {
     }
 
     public onSettingsClick() {
+        // this one works, page is displayed when push is used.
         this.navController.push(SettingsPage).then(() => {
             this.viewController.dismiss();
         });
     }
 
     public onLogoutClick() {
+        // this one does not work, page is not displayed when setRoot is used.
         this.navController.setRoot(LoginPage);
     }
 }
